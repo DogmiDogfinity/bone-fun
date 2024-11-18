@@ -1,0 +1,153 @@
+@media (max-width: 580px) {
+  .page {
+    width: 100%;
+
+    .pagetop {
+      flex-direction: column-reverse;
+
+      .left {
+        width: 100%;
+
+        .create {
+          .LabelCom {
+            font-size: 16px;
+          }
+
+          .inputCom {
+            width: 100%;
+            height: 50px;
+          }
+        }
+
+        .createBtn {
+          width: 100%;
+          margin-top: 20px;
+
+          .CreateBone {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 50px;
+            border-radius: 8px;
+            line-height: 20px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .btm {
+      margin-top: 30px;
+
+      .title {
+        img {
+          width: 45px;
+        }
+
+        .text {
+          font-size: 18px;
+          transform: translate(-20px, -2px)
+        }
+      }
+
+      .table {
+        display: none;
+      }
+
+      .tablephone {
+        color: #fff;
+        margin-top: 20px;
+        display: unset;
+
+        .row {
+          display: grid;
+          grid-template-columns: repeat(3, auto);
+          gap: 16px;
+          margin-top: 10px;
+          background-color: #212224;
+          padding: 10px;
+          border-radius: 8px;
+          position: relative;
+
+          .tableItem {
+            font-size: 12px;
+
+            // justify-self: center;
+            .value {
+              margin-top: 10px;
+
+              .copy {
+                display: flex;
+                align-items: center;
+
+                img {
+                  width: 15px;
+                  margin-left: 3px;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+
+          // &::after {
+          //   content: "";
+          //   position: absolute;
+          //   left: 5px;
+          //   right: 5px;
+          //   bottom: 50%;
+          //   height: 1px;
+          //   background-color: #3F3F3F;
+          // }
+        }
+
+        // .row::before {
+        //   content: '';
+        //   position: absolute;
+        //   left: 5px;
+        //   right: 5px;
+        //   bottom: 30%;
+        //   // width: 100%;
+        //   height: 1px;
+        //   background-color: #3F3F3F;
+        // }
+      }
+    }
+  }
+
+  .openselectDogMinermodal {
+    .openselectDogMinermodalBox {
+      width: 85% !important;
+
+      .tablewarp {
+        width: 100%;
+
+        .table {
+          min-width: 300px;
+
+          .textcolor {
+            font-size: 12px;
+          }
+
+          .TableCellstyle {
+            font-size: 12px;
+          }
+
+          .TableCellstyleTableRow {
+            .MuiTable-root {
+              width: 200px;
+            }
+          }
+        }
+      }
+
+      .selectItem {
+        font-size: 14px;
+      }
+
+      .selectbtn {
+        font-size: 12px;
+        width: 100%;
+      }
+    }
+  }
+}

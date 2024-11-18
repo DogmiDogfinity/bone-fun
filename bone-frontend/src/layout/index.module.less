@@ -1,0 +1,221 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  // width: 100%;
+  height: 70px;
+  background-color: #000;
+  z-index: 99;
+  padding: 0 8%;
+
+  .active {
+    color: #F98C3F;
+  }
+
+  .com {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logogroup {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .logo {
+        width: 60px;
+      }
+
+      .text {
+        color: #fff;
+        font-weight: 800;
+        transform: translate(-5px, -2px)
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .menu {
+        display: flex;
+
+        .menuItem {
+          color: #fff;
+          margin-right: 30px;
+          font-weight: 700;
+          cursor: pointer;
+        }
+
+        .menuItem:hover {
+          color: #F98C3F;
+          cursor: pointer;
+        }
+
+        .active {
+          color: #F98C3F;
+        }
+      }
+
+      .connectWallet {
+        height: 32px;
+        width: 130px;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        font-weight: 700;
+        background: #F98C3F;
+        border-radius: 16px;
+        text-align: center;
+        line-height: 32px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .phone {
+    display: none
+  }
+}
+
+.WalletHowWorks {
+  touch-action: none;
+  outline: none !important;
+  width: 425px;
+  padding: 20px;
+}
+
+.walletRead {
+  width: 100%;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0;
+  font-weight: 500;
+  background: #1b1d28;
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.InternetIdentity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: '';
+  // margin-right: 13px;
+  // margin-left: -10px;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 4px 0;
+  pointer-events: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #000;
+
+    .Text {
+      opacity: 1;
+    }
+  }
+
+  .Left {
+    display: flex;
+    align-items: center;
+  }
+
+  .SelectIcon {
+    padding-right: 10px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .Text {
+    opacity: 0.45;
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+
+  .active {
+    opacity: 1;
+  }
+
+  img {
+    padding-left: 5px;
+    width: 55px;
+    height: 55px;
+    opacity: 0.45;
+  }
+}
+
+.walletActive {
+  pointer-events: auto;
+}
+
+.userModal {
+  width: 300px;
+  padding: 10px;
+
+  .closeWell {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 25px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .id {
+    padding-bottom: 10px;
+
+    .info {
+      width: 100%;
+
+      .label {
+        font-size: 14px;
+        color: #B8B8B8;
+        font-weight: 500;
+      }
+
+      .valuegroup {
+        img {
+          width: 15px;
+          height: auto;
+          transform: translateY(2px);
+          margin-left: 3px;
+          cursor: pointer;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .value {
+          margin-top: 5px;
+          font-size: 14px;
+          color: #FFFFFF;
+          font-weight: 500;
+          background: #36383B;
+          border-radius: 2px;
+          padding: 4px;
+          border-radius: 5px;
+          width: calc(100% - 50px);
+        }
+      }
+
+    }
+
+  }
+}
+
+@import url(./phone.less);
