@@ -1,0 +1,421 @@
+.page {
+  background: url('../../assets/header/bgc.png') no-repeat 95%/95%;
+  background-position: 320px 10px;
+
+  .pagetop {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      .create {
+        .LabelCom {
+          font-size: 30px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          font-weight: 700;
+        }
+
+        .inputCom {
+          color: #fff;
+          padding-left: 10px;
+          background: #212224;
+          border-radius: 10px;
+          height: 60px;
+          width: 500px;
+          font-size: 20px;
+        }
+      }
+
+      .createBtn {
+        margin-top: 30px;
+
+        .CreateBone {
+          display: flex;
+          flex-direction: column;
+          background: #F98C3F;
+          border-radius: 16px;
+          font-size: 16px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          text-align: center;
+          font-weight: 700;
+          height: 60px;
+          width: 500px;
+        }
+      }
+    }
+
+    .right {
+      img {
+        width: 500px;
+      }
+    }
+  }
+
+  .btm {
+    margin-bottom: 20px;
+
+    .title {
+      display: flex;
+      align-items: center;
+
+      .text {
+        font-size: 35px;
+        color: #FFFFFF;
+        font-weight: 600;
+        transform: translate(-30px, -2px)
+      }
+    }
+
+    .table {
+      padding-top: 10px;
+
+      .textcolor {
+        font-size: 16px;
+        color: #FFFFFF;
+        font-weight: 700;
+        border: 0;
+      }
+
+      .bgccolor {}
+
+      .tableHead {
+        border: 0;
+      }
+
+      .TableCellstyleTableRow {
+        background: #212224;
+
+        .percell {
+          border: 8px 0 0 8px;
+        }
+
+        .lastcell {
+          border: 0px 8px 8px 0px;
+        }
+
+        // border-radius: 19px;
+        // padding-top: 5px;
+      }
+
+      .TableCellstyle {
+        border: 0;
+        font-size: 16px;
+        color: #FFFFFF;
+        font-weight: 600;
+
+        .amountwarp {
+          display: flex;
+          align-items: center;
+
+          .amountimg {
+            width: 18px;
+            height: 18px;
+            margin-left: 8px;
+            cursor: pointer;
+          }
+
+          .topup {
+            border: 1px solid #F98C3F;
+            border-radius: 6px;
+            padding: 0 5px;
+            font-size: 14px;
+            margin-left: 8px;
+            cursor: pointer;
+          }
+        }
+
+        .helpState {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 18px;
+            height: 18px;
+            margin-left: 4px;
+            cursor: pointer;
+          }
+        }
+
+        .copy {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 20px;
+            margin-left: 3px;
+            cursor: pointer;
+          }
+        }
+
+        .tableicon {
+          display: flex;
+          align-items: center;
+          // justify-content: flex-end;
+
+          img {
+            width: 40px;
+            margin-right: 5px;
+          }
+        }
+
+        .topupcells {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          img {
+            width: 16px;
+            margin-right: 5px;
+            margin: 0 5px;
+            cursor: pointer;
+          }
+
+          .topup {
+            border: 2px solid #F98C3F;
+            border-radius: 8px;
+            padding: 3px 5px;
+            font-size: 12px;
+            cursor: pointer;
+            scale: 0.9;
+          }
+        }
+      }
+
+      .TableCellstyle:nth-child(1) {
+        border-radius: 8px 0 0 8px;
+      }
+
+      .TableCellstyle:last-child {
+        border-radius: 0px 8px 8px 0px;
+      }
+    }
+
+    .tablephone {
+      display: none
+    }
+
+  }
+}
+
+.topupbtn {
+  margin-top: 30px
+}
+
+.addCyclesModal {
+  .addCycles {
+    .header {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .balanceInfo {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #808fbb;
+
+      .fee {
+        .feeNum {
+          color: #b7b5dc;
+        }
+      }
+
+      .balance {
+        display: flex;
+
+        .MaxBalance {
+          margin-left: 4px;
+          cursor: pointer;
+          color: #b7b5dc;
+        }
+      }
+    }
+
+    .amountInput {
+      border-radius: 8px;
+      padding: 8px;
+      margin-top: 15px;
+      background-color: #36383b;
+
+      .amount {
+        color: #fff;
+        width: 100%;
+        // font-size: 14px;
+      }
+    }
+
+    .openbuyAmountLoding {
+      margin-top: 30px;
+      width: 100%;
+      text-transform: none;
+    }
+  }
+}
+
+.openselectDogMinermodal {
+  .content {
+    width: 100%;
+    height: 500px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      // background-color: #333;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 10px;
+      border: 2px solid #333;
+    }
+
+    .title {
+      font-size: 24px;
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    .tablewarp {
+      height: 500px;
+      overflow-y: auto;
+      padding: 10px;
+      margin-top: 10px;
+
+      .table {
+        .textcolor {
+          font-size: 16px;
+          color: #FFFFFF;
+          font-weight: 700;
+          border: 0;
+        }
+
+        .bgccolor {}
+
+        .tableHead {
+          border: 0;
+        }
+
+        .TableCellstyleTableRow {
+          background: #313235;
+          // border: 1px solid #F98C3F;
+          cursor: pointer;
+
+          .MuiTable-root {
+            width: 300px;
+          }
+
+          .percell {
+            border: 8px 0 0 8px;
+          }
+
+          .lastcell {
+            border: 0px 8px 8px 0px;
+          }
+
+          // border-radius: 19px;
+          // padding-top: 5px;
+        }
+
+        .TableCellstyle {
+          border: 0;
+          font-size: 16px;
+          color: #FFFFFF;
+          font-weight: 600;
+          // border-radius: 20px;
+
+          .amountwarp {
+            display: flex;
+            align-items: center;
+
+            .amountimg {
+              width: 18px;
+              height: 18px;
+              margin-left: 8px;
+              cursor: pointer;
+            }
+
+            .topup {
+              border: 1px solid #F98C3F;
+              border-radius: 6px;
+              padding: 0 5px;
+              font-size: 14px;
+              margin-left: 8px;
+              cursor: pointer;
+            }
+          }
+
+
+          .tableicon {
+            display: flex;
+            align-items: center;
+            // justify-content: flex-end;
+
+            img {
+              width: 40px;
+              margin-right: 5px;
+            }
+          }
+
+          .topupcells {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            img {
+              width: 16px;
+              margin-right: 5px;
+              margin: 0 5px;
+              cursor: pointer;
+            }
+
+            .topup {
+              border: 2px solid #F98C3F;
+              border-radius: 8px;
+              padding: 3px 5px;
+              font-size: 12px;
+              cursor: pointer;
+              scale: 0.9;
+            }
+          }
+
+        }
+
+        .TableCellstyle:nth-child(1) {
+          // border-left: 1px solid #F98C3F;
+          border-radius: 8px 0 0 8px;
+        }
+
+        .TableCellstyle:last-child {
+          // border-right: 1px solid #F98C3F;
+          border-radius: 8px 0 0 8px;
+        }
+
+        .TableCellstyleTableRow:hover {
+          border: 1px solid #F98C3F;
+          border-radius: 8px
+        }
+      }
+    }
+
+    .selectAlliance {
+      font-size: 16px;
+      color: #FFFFFF;
+      font-weight: 700;
+      margin-top: 10px
+    }
+  }
+}
+
+@import url(./phone.less);

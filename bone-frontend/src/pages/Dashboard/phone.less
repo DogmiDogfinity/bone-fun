@@ -1,0 +1,58 @@
+@media (max-width: 580px) {
+  .page {
+    .headertab {
+      .tabItem {
+        font-size: 12px;
+      }
+    }
+
+    .tablewarp {
+      display: none;
+    }
+
+    .tablephone {
+      color: #fff;
+      margin-top: 0px;
+      display: unset;
+
+      .row {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 16px;
+        margin-top: 10px;
+        background-color: #212224;
+        padding: 10px;
+        border-radius: 8px;
+
+        .tableItem {
+          font-size: 12px;
+
+          // justify-self: center;
+          .value {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .phonePagination {
+    & .MuiTablePagination-toolbar {
+      padding: '0 4px',
+    }
+
+    ;
+
+    & .MuiTablePagination-actions {
+      margin: 0,
+    }
+
+    ;
+
+    & .MuiSelect-root {
+      font-size: 12px,
+    }
+
+    ;
+  }
+}

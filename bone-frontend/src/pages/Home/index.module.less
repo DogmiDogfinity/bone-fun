@@ -1,0 +1,250 @@
+.Home {
+  // margin-top: 80px;
+  background: url('../../assets/header/bgc.png') center no-repeat;
+  background-size: contain;
+  background-position: 0 12%;
+
+  .disc {
+    background: url('../../assets/header/love.png') center no-repeat;
+    background-position: 85% center;
+    background-size: contain;
+    height: 550px;
+
+    .disctop {
+      font-size: 18px;
+      color: #F98C3F;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+
+    .discCenter {
+      margin-top: 50px;
+      font-size: 45px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+
+    .btngo {
+      background-color: #F98C3F;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      width: 150px;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-top: 60px;
+      cursor: pointer;
+    }
+
+    .links {
+      display: flex;
+      justify-content: space-evenly;
+      width: 125px;
+      margin-top: 40px;
+
+      img {
+        width: 35px;
+        height: auto;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .boneinfo {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+
+    .boneinfoLeft {
+      .logogroup {
+        display: flex;
+        align-items: center;
+        transform: translateX(-12px);
+
+        .logo {
+          width: 100px;
+        }
+
+        .text {
+          color: #fff;
+          font-size: 20px;
+          font-weight: 800;
+          transform: translate(-10px, -2px)
+        }
+      }
+
+      .carinfo {
+        margin-top: 10px;
+
+        .carinfoItem {
+          margin-top: 10px;
+          background: #212224;
+          border-radius: 10px;
+          padding-left: 18px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          width: 500px;
+          display: flex;
+          align-items: center;
+
+          .label {
+            font-size: 20px;
+            color: #FFFFFF;
+            font-weight: 700;
+          }
+
+          .value {
+            font-size: 30px;
+            color: #F98C3F;
+            line-height: 45px;
+            font-weight: 700;
+            margin-left: 20px;
+          }
+
+          img {
+            width: 25px;
+            margin-left: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .boneinfoRight {
+      width: 400px;
+      margin-left: 300px;
+    }
+  }
+
+  .stats {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+
+    .statsleft {
+      width: 400px;
+    }
+
+    .statsright {
+      display: flex;
+      flex-direction: column;
+
+      .top {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        position: relative;
+
+        img {
+          width: 80px;
+          position: absolute;
+          right: 80px;
+        }
+
+        .text {
+          position: absolute;
+          right: 0;
+          font-size: 35px;
+          color: #FFFFFF;
+          font-weight: 600;
+          bottom: 10px;
+        }
+      }
+
+      .btm {
+        margin-left: 300px;
+        display: flex;
+
+        .statsItem {
+          margin-top: 10px;
+
+          .statsLabel {
+            font-size: 20px;
+            color: #FFFFFF;
+            font-weight: 700;
+          }
+
+          .statsValue {
+            font-size: 24px;
+            color: #F98C3F;
+            font-weight: 600;
+            background: #212224;
+            border-radius: 10px;
+            height: 45px;
+            line-height: 50px;
+            padding-left: 10px;
+            margin-top: 5px;
+          }
+        }
+
+        .statinforight {
+          margin-left: 30px;
+        }
+      }
+
+    }
+  }
+
+  .howworks {
+    margin-top: 150px;
+
+    .howworkstop {
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+      position: relative;
+
+      img {
+        width: 80px;
+        position: absolute;
+        left: 0px;
+      }
+
+      .text {
+        position: absolute;
+        left: 40px;
+        font-size: 35px;
+        color: #FFFFFF;
+        font-weight: 600;
+        bottom: 10px;
+      }
+    }
+
+    .howworksbtm {
+      margin-top: 40px;
+
+      .item {
+        margin-top: 20px;
+        background: #212224;
+        border-radius: 19px;
+        padding: 20px;
+
+        .label {
+          font-size: 20px;
+          color: #F98C3F;
+          font-weight: 400;
+        }
+
+        .value {
+          font-size: 14px;
+          color: #FFFFFF;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .btmfrommarkers {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 300px;
+    }
+  }
+}
+
+@import url(./phone.less);

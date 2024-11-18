@@ -1,0 +1,108 @@
+.page {
+  margin-top: 110px;
+
+  .rotatingimage {
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+
+  .rotate {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .card {
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+
+    .cardItem {
+      background: #212224;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px 35px;
+      border-radius: 10px;
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .right {
+
+          img {
+            width: 20px;
+            margin-left: 8px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .btm {
+        margin-top: 30px;
+        color: #F98C3F;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.sendicpModal {
+  .sendicp {
+    .header {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .balanceInfo {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #808fbb;
+
+      .MaxICPorBalance {
+        color: #b7b5dc;
+        margin-left: 5px;
+        cursor: pointer;
+      }
+    }
+
+    .amountInput {
+      border-radius: 8px;
+      padding: 8px;
+      margin-top: 15px;
+      background-color: #36383b;
+
+      .icpamount {
+        color: #fff;
+      }
+
+      .amount {
+        color: #6c779f;
+        width: 100%;
+        // font-size: 14px;
+      }
+    }
+
+    .openbuyAmountLoding {
+      margin-top: 20px;
+      width: 100%;
+      text-transform: none;
+    }
+  }
+}
+
+@import url(./phone.less);

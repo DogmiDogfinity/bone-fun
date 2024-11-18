@@ -1,0 +1,92 @@
+.page {
+  color: #fff;
+  margin-top: 110px;
+
+  .headertab {
+    background-color: #212224;
+    border-radius: 10px;
+  }
+
+  .TabPanelclass {
+    padding: 0;
+  }
+
+  .tablewarp {
+    .table {
+      padding-top: 10px;
+
+      .textcolor {
+        font-size: 16px;
+        color: #FFFFFF;
+        font-weight: 700;
+        border: 0;
+      }
+
+      .bgccolor {}
+
+      .tableHead {
+        border: 0;
+      }
+
+      .TableCellstyleTableRow {
+        background: #212224;
+        border-radius: 10px;
+      }
+
+      .TableCellstyle {
+        border: 0;
+        font-size: 16px;
+        color: #FFFFFF;
+        font-weight: 600;
+
+        .tableicon {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          img {
+            width: 70px;
+            margin-right: 5px;
+          }
+        }
+
+        .topupcells {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          img {
+            width: 16px;
+            margin-right: 5px;
+            margin: 0 5px;
+            cursor: pointer;
+          }
+
+          .topup {
+            border: 2px solid #F98C3F;
+            border-radius: 8px;
+            padding: 3px 5px;
+            font-size: 12px;
+            cursor: pointer;
+            scale: 0.9;
+          }
+        }
+      }
+
+      .TableCellstyle:nth-child(1) {
+        border-radius: 8px 0 0 8px;
+      }
+
+      .TableCellstyle:last-child {
+        border-radius: 0px 8px 8px 0px;
+
+      }
+    }
+  }
+
+  .tablephone {
+    display: none
+  }
+}
+
+@import url(./phone.less);
