@@ -1,0 +1,113 @@
+type DogContext = record {
+  ore : text;
+  ore_cnt : nat64;
+  ore_amount : nat;
+  owner : principal;
+  name : text;
+  ores : vec DogHash;
+  mining_alliance : opt nat64;
+  dog_level : DogLevel;
+  ore_difficulty : nat64;
+  create_time : nat64;
+  main_pid : principal;
+  mining_state : MiningState;
+  mining_type : MiningType;
+};
+type DogContextOut = record {
+  ore_cnt : nat64;
+  ore_amount : nat;
+  dog_id : principal;
+  owner : principal;
+  name : text;
+  mining_alliance : opt nat64;
+  dog_level : DogLevel;
+  mining_state : MiningState;
+  mining_type : MiningType;
+};
+type DogHash = record {
+  owner : principal;
+  ores : vec text;
+  mining_alliance : opt nat64;
+  timestamp : nat64;
+};
+type DogLevel = variant { SilverDog; GoldDog; CopperDog; DiamondDog };
+type HashRecord = record {
+  new_ore : text;
+  old_ore : text;
+  process_ore : OreHashOut;
+  ore_difficulty : text;
+  process_result_ore : text;
+};
+type HomepageCalcInfo = record {
+  total_number_of_minder : nat64;
+  block_reward : nat;
+  current_avtive_minders : nat64;
+};
+type MRecord = record {
+  ore : text;
+  utc : nat64;
+  owner : principal;
+  high : nat64;
+  reward_amount : nat;
+  dog_level : DogLevel;
+  alliance_id : opt nat64;
+  hash_record : opt HashRecord;
+  timestamp : nat64;
+  dog_canister : principal;
+};
+type MiningState = variant { STOP; ACTIVITY };
+type MiningType = variant { POOL; ALONE };
+type OreHashOut = record {
+  cycle_num : nat64;
+  time : nat64;
+  old_ore_rev : text;
+  dog_ore_rev : text;
+};
+type OutPoolInfo = record {
+  id : nat64;
+  dogs_cnt : vec text;
+  owner : principal;
+  dogs : vec principal;
+  name : text;
+  mining_weight : nat;
+};
+type RecordIndex = record { start_idx : nat64; end_idx : nat64 };
+type Result = variant { Ok; Err : text };
+type Result_1 = variant { Ok : nat64; Err : text };
+type Result_2 = variant { Ok : principal; Err : text };
+type Result_3 = variant { Ok : record { text; nat; nat64 }; Err : text };
+type VerifyDogHash = record { dog_hash : DogHash; create_time : nat64 };
+service : () -> {
+  add_cycles : (nat, principal) -> (Result);
+  create_alliance : (text) -> (Result_1);
+  create_dog : (text) -> (Result_2);
+  cycles : () -> (nat64) query;
+  dog_info : (principal) -> (DogContext) query;
+  dog_level_upgrade : (principal) -> (Result);
+  get_all_dogs_info : () -> (vec DogContextOut) query;
+  get_block_24h_cnt : () -> (nat32) query;
+  get_create_time : () -> (nat64) query;
+  get_current_block_reward : () -> (nat) query;
+  get_dog_level_str : (principal) -> (text) query;
+  get_dogs : () -> (vec principal) query;
+  get_dogs_info : (principal) -> (vec DogContextOut) query;
+  get_homepage_calc : () -> (HomepageCalcInfo) query;
+  get_miners : () -> (vec principal) query;
+  get_mining_alliance : (nat64) -> (OutPoolInfo);
+  get_mining_alliances : () -> (vec nat64) query;
+  get_ore : () -> (text, nat64) query;
+  get_record_idx : () -> (RecordIndex) query;
+  get_record_index : (nat64, nat64) -> (vec record { nat64; MRecord }) query;
+  get_record_rev : (nat64, nat64) -> (vec record { nat64; MRecord }) query;
+  join_alliance : (principal, nat64) -> (Result);
+  leave_alliance : (principal, nat64) -> (Result);
+  time_until_next_having_days : () -> (nat64) query;
+  top_alliance : () -> (
+      vec record { text; nat64; nat64; nat64; nat64; nat64; nat },
+    ) query;
+  top_user : () -> (
+      vec record { principal; nat64; nat64; nat64; nat64; nat },
+    ) query;
+  update_dog_state : (MiningState) -> ();
+  verify_ore : (VerifyDogHash) -> (Result_3);
+}

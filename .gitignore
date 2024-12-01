@@ -23,7 +23,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
+*.lock
 .env
 .env.development
 .env.production

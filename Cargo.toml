@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "src/bone_lib",
+    "src/bone_main",
+    "src/bone_dog"
+]
+

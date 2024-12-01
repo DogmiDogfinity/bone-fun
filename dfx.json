@@ -1,0 +1,46 @@
+{
+  "canisters": {
+    "bone": {
+      "candid": "token/candid/ledger.did",
+      "type": "custom",
+      "wasm": "token/wasm/ic-icrc1-ledger.wasm"
+    },
+    "bone_dog": {
+      "build": "./build.sh bone_dog src/bone_dog/bone_dog.did",
+      "candid": "src/bone_dog/bone_dog.did",
+      "package": "bone_dog",
+      "type": "custom",
+      "wasm": "target/wasm32-unknown-unknown/release/bone_dog-opt.wasm.gz"
+    },
+    "bone_main": {
+      "build": "./build.sh bone_main src/bone_main/bone_main.did",
+      "candid": "src/bone_main/bone_main.did",
+      "package": "bone_main",
+      "type": "custom",
+      "wasm": "target/wasm32-unknown-unknown/release/bone_main-opt-did.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.23.0",
+  "networks": {
+    "ic": {
+      "providers": [
+        "https://icp0.io/"
+      ],
+      "type": "persistent"
+    },
+    "testnet": {
+      "providers": [
+        "http://[2a00:fb01:400:42:5000:d1ff:fefe:987e]:8080"
+      ],
+      "type": "persistent"
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

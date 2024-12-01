@@ -1,0 +1,33 @@
+type DogContext = record {
+  ore : text;
+  ore_cnt : nat64;
+  ore_amount : nat;
+  owner : principal;
+  name : text;
+  ores : vec DogHash;
+  mining_alliance : opt nat64;
+  dog_level : DogLevel;
+  ore_difficulty : nat64;
+  create_time : nat64;
+  main_pid : principal;
+  mining_state : MiningState;
+  mining_type : MiningType;
+};
+type DogHash = record {
+  owner : principal;
+  ores : vec text;
+  mining_alliance : opt nat64;
+  timestamp : nat64;
+};
+type DogLevel = variant { SilverDog; GoldDog; CopperDog; DiamondDog };
+type MiningState = variant { STOP; ACTIVITY };
+type MiningType = variant { POOL; ALONE };
+type Result = variant { Ok; Err : text };
+service : (principal, opt principal, text, text, nat64) -> {
+  cycles : () -> (nat64) query;
+  dog_info : () -> (DogContext) query;
+  dog_level_upgrade : (DogLevel) -> (Result);
+  dog_mining_state_update : (text) -> (Result);
+  dog_mining_type_update : (MiningType, opt nat64) -> (Result);
+  get_dog_state : () -> (MiningState, MiningType, DogLevel) query;
+}

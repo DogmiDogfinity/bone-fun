@@ -1,0 +1,24 @@
+[package]
+name = "bone_dog"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "bone_dog"
+path = "src/main.rs"
+
+[dependencies]
+ic-cdk = "0.12.2"
+ic-cdk-macros = "0.8.1"
+ic-ledger-types = "0.10.0"
+ic-cdk-timers = "0.7.0"
+candid = { version = "0.10.6" }
+bone_lib = { path = '../bone_lib', version = '0.1.0' }
+
+[features]
+local = []
+test = []
+pro = []
+
+[target.'cfg(not(target_family = "wasm"))'.dependencies]
+async-std = { version = "1.10.0", features = ["attributes"] }
